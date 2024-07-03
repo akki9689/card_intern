@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+.body-style {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 500;
+    background-image: url(./images/bg-main-desktop.png);
+    background-size: 35% 180%;
+    background-repeat: no-repeat;
+}
+
+.main-cards {
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.flex-card{
+    display: flex;
+    justify-content: space-between;
+
+}
+.section-card {
+    width: 20%;
+}
+
+.div-card {
+    color: white;
+    padding: 5%;
+    background-repeat: no-repeat;
+}
+
+.front-card {
+    width: 130%;
+    background-image: url(./images/bg-card-front.png);
+    background-size: 100% 100%;
+    margin-top: 30%;
+}
+
+.back-card {
+    width: 130%;
+    background-image: url(./images/bg-card-back.png);
+    background-size: 100% 100%;
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+#cardNumber {
+    padding-top: 10%;
+    font-size: 1.5rem;
+    margin-bottom: 8%
+}
+
+.card-cvc {
+    padding-top: 25%;
+    padding-left: 80%;
+    position: relative;
+}
+
+input,
+select {
+    height: 3rem;
+    border: solid 1px;
+    color: var(--dark-grayish-violet);
+    border-color: var(--light-grayish-violet);
+    padding: 5%;
+}
+
+#errorName,
+#errorNumber,
+#errorDate,
+#errorCvc,
+#messageCardAdded {
+    display: none;
+}
+
+button {
+    color: white;
+    height: 3rem;
+    background-color: var(--very-dark-violet);
+}
+
+.card-name,
+.card-cvc,
+.card-date {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.19rem;
+}
+
+#messageCardAdded {
+    color: var(--dark-grayish-violet);
+    width: 320px;
+    text-align: center;
+}
+
+label,
+#messageTitle,
+.footerLinks a {
+    color: var(--very-dark-violet);
+}
+
+@media (max-width: 1025px) {
+    .body-style {
+        background-size: 100% 30%;
+    }
+
+    .main-cards {
+        display: block;
+        margin: 10%;
+    }
+
+    .section-card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .front-card {
+        width: 80%;
+        max-height: 30vh;
+        margin-top: -15%;
+        order: 2;
+        padding-bottom: 15%;
+    }
+
+    .back-card {
+        width: 80%;
+        margin-left: 20%;
+        margin-top: 0%;
+        order: 1
+    }
+    .flex-card{
+        margin-top: 20%;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .main-cards {
+        margin: 5%;
+    }
+
+    #cardNumber {
+        font-size: 1rem;
+    }
+
+    .front-card {
+        margin-top: -25%;
+    }
+}
+
+@media (max-width: 375px) {
+    #cardNumber {
+        padding-top: 2%;
+    }
+
+    .front-card {
+        margin-top: -35%;
+    }
+
+    .card-name,
+    .card-date,
+    .card-cvc {
+        font-size: 0.5em;
+    }
+
+    label {
+        font-size: 0.7rem;
+    }
+     #cardForm{
+        margin-top: 20%;
+    }
+}
